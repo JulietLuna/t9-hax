@@ -150,116 +150,55 @@ function playBreatheGame() {
 
 function playPaintGame() {
   var paintGame = '\
-  <script>\
-  body { \
-      margin:0;\
-      padding:0;\
-      width:100vh;\
-      height:100vw;\
-      background:#F3F3F3;\
+  <style>\
+  main {\
+    display: flex;\
+    background-color: white;\
+    border-radius: 40px;\
+    height: 80px;\
+    width: 100%;\
+    overflow: hidden;\
   }\
-  main { \
-      position:absolute;\
-      top:0;\
-      left:0;\
-      bottom:0;\
-      width:80px;\
-      background:#4527a0;\
+  .colors {\
+    width: 60%;\
+    height: 100%;\
   }\
-  div { \
-      position: absolute;\
-      top: 80%;\
-      width: 100%;\
-      padding: 10px;\
-      background:#4527a0;\
+  .t9-color-picker {\
+    height: 100%;\
+    width: 100%;\
+    font-size: 40px;\
+    padding-left: 30px;\
+    border: none;\
   }\
-  h1{\
-      font-family: "Arial Rounded MT Bold", "Helvetica Rounded", Arial, sans-serif;\
-      color: #c0ca33;\
-      text-align: center; \
-      font-size: 22px;\
+  .t9-color-picker:hover {\
+    background-color: rgb(230, 230, 230);\
   }\
-  p {\
-      font-family: "Arial Rounded MT Bold", "Helvetica Rounded", Arial, sans-serif;\
-      color: white;\
-      text-align: center; \
-      font-size: 14px;\
-      padding-right:120px;\
-      padding-left:120px;\
+  .t9-clear {\
+    height: 100%;\
+    width: 12%;\
+    border: none;\
+    background-color:white;\
+    font-size: 30px;\
   }\
-  main section {\
-      display:block;\
-      margin:15px auto;\
-      width:30px;\
-      height:30px;\
+  .t9-clear:hover {\
+    background-color: rgb(230, 230, 230);\
   }\
-  main .colors {\
-      background:#171717;\
-      border:1px solid #F3F3F3;\
-      position:relative;\
+  .thickness {\
+    width: 30%;\
+    height: 100%;\
   }\
-  main .colors .t9-color-picker {\
-      display:none;\
-      width:200px;\
-      height:30px;\
-      position:absolute;\
-      top:50%;\
-      left:30px;\
-      -webkit-transform:translateY(-50%);\
-      transform:translateY(-50%);\
+  .t9-stroke-weight {\
+    width: 100%;\
+    border: none;\
+    font-size: 40px;\
+    height: 100%;\
+    background-color: white;\
+    padding-left:30px;\
   }\
-  main .colors .t9-color-picker:focus {\
-      display:block;\
+  .t9-stroke-weight:hover {\
+    background-color: rgb(230, 230, 230);\
   }\
-  main .colors:hover .t9-color-picker {\
-      display:block;\
-  }\
-  main .thickness {\
-          position:relative;\
-          background-color:#F3F3F3;\
-  }\
-  main .thickness::after {\
-      content:"";\
-      position:absolute;\
-      left:50%;\
-      top:50%;\
-      -webkit-transform:translate(-50%, -50%);\
-      transform:translate(-50%, -50%);\
-      width:50%;\
-      height:50%;\
-      border-radius:50%;\
-      background:#171717;\
-  }\
-  main .thickness .t9-stroke-weight {\
-      display:none;\
-      position:absolute;\
-      width:auto;\
-      height:25px;\
-      left:30px;\
-      top:50%;\
-      -webkit-transform:translateY(-50%);\
-      transform:translateY(-50%); \
-  }\
-  main .thickness .t9-stroke-weight:focus {\
-      display:block; \
-  }\
-  main .thickness:hover .t9-stroke-weight {\
-      display:block; \
-  }\
-  main .t9-clear {\
-      display:block;\
-      width:30px;\
-      height:30px;\
-      margin:0 auto;\
-      color:#171717;\
-      font-size:20px;\
-      font-weight:900;\
-      background-color:#c0ca33;\
-      border:none;\
-      outline:none;\
-      cursor:pointer;\
-  }\
-  </script>\
+  </style>\
   <div>\
     <canvas id="t9-canvas"></canvas>\
     <main>\
