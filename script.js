@@ -120,7 +120,7 @@ function playTypingGame() {
   }\
   </style>\
       <div class= "t9hat">\
-      <img src="images/WizardHat.png" width="78" height="112">\
+      <img src="https://github.com/zer0grand/t9-hax/blob/master/images/WizardHat.png" width="78" height="112">\
       </div>\
   <div class="purp t9center">\
     <header class="hcolor t9arial">\
