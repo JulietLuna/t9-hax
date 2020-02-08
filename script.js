@@ -34,7 +34,7 @@ gettingItem.then((res) => {
 
 setTimeout(function() {
   _timeOut();
-}, 4000);
+}, 2000);
 
 function _timeOut() {
   var html = '\
@@ -46,7 +46,12 @@ function _timeOut() {
   }
   html += '</div></div></div>';
   document.body.firstChild.insertAdjacentHTML('beforebegin', html);
+  document.getElementById('t9-activity-3').onclick = function () {
+    console.log("GOTHERE1");
+    playBreatheGame();
+  };
   document.getElementById('t9-activity-5').onclick = function () {
+    console.log("GOTHERE2");
     playTypingGame();
   };
 }
@@ -120,20 +125,21 @@ function playTypingGame() {
 function playBreatheGame() {
   var breatheGame = '\
     <style>\
-      #t9-cirlce {\
+      .t9-cirlce {\
         width: 200px;\
         height: 200px;\
         background-color: red;\
-        transition: transform 1s;\
+        transition: transform 3s;\
       }\
     </style>\
-    <div>\
-      <div id="t9-circle"></div>\
+    <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">\
+      <div id="t9-circle" style="width: 200px; height: 200px; background-color: red; transition: transform 1s; border-radius:100%;"></div>\
+      <div id="t9-breathe-text" style="font-size:40px; margin-top:80px; text-align:center;">breathe</div>\
     </div>';
 
   document.getElementById('t9-hax-cover').innerHTML = '\
   <div style="width: 700px; height: 500px; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color:white; border-radius: 40px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">\
     '+ breatheGame +'\
   </div>';
-  startTypingGame();
+  startBreatheGame();
 }
