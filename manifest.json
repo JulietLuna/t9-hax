@@ -27,7 +27,8 @@
     "images/Break-Time_Activity-Icons-03.png",
     "images/Break-Time_Activity-Icons-04.png",
     "images/Break-Time_Activity-Icons-05.png",
-    "images/Break-Time_Activity-Icons-06.png"
+    "images/Break-Time_Activity-Icons-06.png",
+    "images/WizardHat.png"
   ],
   "content_scripts": [
   {
