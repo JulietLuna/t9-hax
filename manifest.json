@@ -32,7 +32,11 @@
   "content_scripts": [
   {
     "matches": ["<all_urls>"],
-    "js": ["script.js"]
+    "js": [
+      "breatheGame/sketch.js",
+      "typingGame/main.js",
+      "script.js"
+    ]
   }
 ]
 }
