@@ -50,7 +50,7 @@ function clearCanvas () {
 
 window.addEventListener('resize', resizeCanvas);
 function resizeCanvas () {
-  canvas.width = 900;
+  canvas.width = 700;
   canvas.height = 500;
 }
 resizeCanvas();
