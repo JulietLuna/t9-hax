@@ -83,35 +83,65 @@ function playTypingGame() {
   <style>\
   .purp {\
       background-color: #4527a0;\
+      width: 645;\
+      height: 500px;\
   }\
-  .arial {\
+  .t9arial {\
       font-family: "Arial Rounded MT Bold", "Helvetica Rounded", Arial, sans-serif;\
       color: #c0ca33;\
+      text-align: center;\
+      font-size: 28px;\
+    }\
+  .t9text {\
+    font-family: "Arial Rounded MT Bold", "Helvetica Rounded", Arial, sans-serif;\
+    color: #ffffff;\
+    text-align: center;\
+    font-size: 16px;\
+  }\
+  .t9textdynamic {\
+    font-family: "Arial Rounded MT Bold", "Helvetica Rounded", Arial, sans-serif;\
+    text-align: center;\
+    color: #c0ca33;\
+    font-size: 20px;\
+  }\
+  .t9center{\
+    font-family: "Arial Rounded MT Bold", "Helvetica Rounded", Arial, sans-serif;\
+    text-align: center;\
+    padding: 120px;\
   }\
   .hcolor {\
       background-color:#291661;\
   }\
+  .t9hat {\
+    background-color: #4527a0;\
+    position: absolute;\
+    left: 50%;\
+    margin-left: -38px;\
+  }\
   </style>\
-  <div class="purp arial text-white">\
-    <header class="hcolor arial text-center p-3 mb-5">\
+      <div class= "t9hat">\
+      <img src="images/WizardHat.png" width="78" height="112">\
+      </div>\
+  <div class="purp t9center">\
+    <header class="hcolor t9arial">\
       <h1>Word Wizard</h1>\
     </header>\
     <div class="container text-center">\
       <div class="row">\
         <div class="col-md-6 mx-auto">\
-          <p class="lead">Type The Given Word Within\
-            <span class="text-success" id="seconds">5</span> Seconds. To play again, just type the current word. Your score will reset:</p>\
-          <h2 class="display-2 mb-5" id="current-word">hello</h2>\
+          <p class="t9text">Type the given word within\
+            <span class="t9text" id="seconds">5</span> Seconds. To play again, just type the current word. Your score will reset:</p>\
+          <h2 class="t9textdynamic display-2 mb-5" id="current-word">hello</h2>\
           <input type="text" class="form-control form-control-lg" placeholder="Start typing..." id="word-input" autofocus>\
-          <h4 class="mt-3" id="message"></h4>\
+          <h4 class="t9textdynamic" id="message"></h4>\
           <div class="row mt-5">\
             <div class="col-md-6">\
-              <h3>Time Left:\
+              <h3 class="t9text">Time Left:\
                 <span id="time">0</span>\
               </h3>\
             </div>\
             <div class="col-md-6">\
-              <h3>Score:\
+              <h3 class="t9text">Score:\
                 <span id="score">0</span>\
               </h3>\
             </div>\
