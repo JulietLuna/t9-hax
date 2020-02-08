@@ -1,14 +1,38 @@
 {
+  "background": {
+      "scripts": ["background.js"]
+  },
+  "browser_action": {
+      "default_title": "Favourite colour option"
+  },
+  "description": "An example options ui",
+  "homepage_url": "https://github.com/mdn/webextensions-examples/tree/master/favourite-colour",
   "manifest_version": 2,
-  "name": "Borderify",
-  "version": "1.0",
-
-  "description": "Adds a red border to all webpages matching mozilla.org.",
-
+  "name": "Favourite colour",
+  "options_ui": {
+      "page": "options.html",
+      "browser_style": true
+  },
+  "permissions": ["storage"],
+  "version": "1.1",
+  "browser_specific_settings": {
+      "gecko": {
+          "id": "favourite-colour-examples@mozilla.org",
+          "strict_min_version": "57.0a1"
+      }
+  },
+  "web_accessible_resources": [
+    "images/Break-Time_Activity-Icons-01.png",
+    "images/Break-Time_Activity-Icons-02.png",
+    "images/Break-Time_Activity-Icons-03.png",
+    "images/Break-Time_Activity-Icons-04.png",
+    "images/Break-Time_Activity-Icons-05.png",
+    "images/Break-Time_Activity-Icons-06.png"
+  ],
   "content_scripts": [
-    {
-      "matches": ["https://www.youtube.com/*"],
-      "js": ["script.js"]
-    }
-  ]
+  {
+    "matches": ["<all_urls>"],
+    "js": ["script.js"]
+  }
+]
 }
