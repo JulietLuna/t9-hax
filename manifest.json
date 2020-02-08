@@ -35,6 +35,7 @@
     "js": [
       "breatheGame/sketch.js",
       "typingGame/main.js",
+      "paint/main.js",
       "script.js"
     ]
   }

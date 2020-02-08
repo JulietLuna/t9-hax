@@ -54,6 +54,10 @@ function _timeOut() {
     console.log("GOTHERE2");
     playTypingGame();
   };
+  document.getElementById('t9-activity-6').onclick = function () {
+    console.log("GOTHERE3");
+    playPaintGame();
+  };
 }
 
 function youWin() {
@@ -142,4 +146,142 @@ function playBreatheGame() {
     '+ breatheGame +'\
   </div>';
   startBreatheGame();
+}
+
+function playPaintGame() {
+  var paintGame = '\
+  <script>\
+  body { \
+      margin:0;\
+      padding:0;\
+      width:100vh;\
+      height:100vw;\
+      background:#F3F3F3;\
+  }\
+  main { \
+      position:absolute;\
+      top:0;\
+      left:0;\
+      bottom:0;\
+      width:80px;\
+      background:#4527a0;\
+  }\
+  div { \
+      position: absolute;\
+      top: 80%;\
+      width: 100%;\
+      padding: 10px;\
+      background:#4527a0;\
+  }\
+  h1{\
+      font-family: "Arial Rounded MT Bold", "Helvetica Rounded", Arial, sans-serif;\
+      color: #c0ca33;\
+      text-align: center; \
+      font-size: 22px;\
+  }\
+  p {\
+      font-family: "Arial Rounded MT Bold", "Helvetica Rounded", Arial, sans-serif;\
+      color: white;\
+      text-align: center; \
+      font-size: 14px;\
+      padding-right:120px;\
+      padding-left:120px;\
+  }\
+  main section {\
+      display:block;\
+      margin:15px auto;\
+      width:30px;\
+      height:30px;\
+  }\
+  main .colors {\
+      background:#171717;\
+      border:1px solid #F3F3F3;\
+      position:relative;\
+  }\
+  main .colors .t9-color-picker {\
+      display:none;\
+      width:200px;\
+      height:30px;\
+      position:absolute;\
+      top:50%;\
+      left:30px;\
+      -webkit-transform:translateY(-50%);\
+      transform:translateY(-50%);\
+  }\
+  main .colors .t9-color-picker:focus {\
+      display:block;\
+  }\
+  main .colors:hover .t9-color-picker {\
+      display:block;\
+  }\
+  main .thickness {\
+          position:relative;\
+          background-color:#F3F3F3;\
+  }\
+  main .thickness::after {\
+      content:"";\
+      position:absolute;\
+      left:50%;\
+      top:50%;\
+      -webkit-transform:translate(-50%, -50%);\
+      transform:translate(-50%, -50%);\
+      width:50%;\
+      height:50%;\
+      border-radius:50%;\
+      background:#171717;\
+  }\
+  main .thickness .t9-stroke-weight {\
+      display:none;\
+      position:absolute;\
+      width:auto;\
+      height:25px;\
+      left:30px;\
+      top:50%;\
+      -webkit-transform:translateY(-50%);\
+      transform:translateY(-50%); \
+  }\
+  main .thickness .t9-stroke-weight:focus {\
+      display:block; \
+  }\
+  main .thickness:hover .t9-stroke-weight {\
+      display:block; \
+  }\
+  main .t9-clear {\
+      display:block;\
+      width:30px;\
+      height:30px;\
+      margin:0 auto;\
+      color:#171717;\
+      font-size:20px;\
+      font-weight:900;\
+      background-color:#c0ca33;\
+      border:none;\
+      outline:none;\
+      cursor:pointer;\
+  }\
+  </script>\
+  <div>\
+    <canvas id="t9-canvas"></canvas>\
+    <main>\
+      <section class="colors">\
+        <input type="text" class="t9-color-picker" value="black" />\
+      </section>\
+      <section class="thickness">\
+        <input type="number" class="t9-stroke-weight" value="4" />\
+      </section>\
+      <button class="t9-clear">X</button>\
+    </main>\
+    <script src="main.js"></script>\
+    <div>\
+      <h1>\
+        Draw Something!\
+      </h1>\
+      <p>Select a color using the color picker, you can type in words like "red" or "blue". Adjust your brush size by clicking on the dot and typing a number. Press the "X" to clear your canvas.</p>\
+    </div>\
+  </div>';
+  document.getElementById('t9-hax-cover').innerHTML = '\
+  <div style="width: 700px; height: 500px; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color:white; border-radius: 40px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">\
+    '+ paintGame +'\
+  </div>';
+  startPaintGame();
 }
